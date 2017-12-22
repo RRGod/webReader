@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+		"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true"></constant>
+	<constant name="struts.ui.theme" value="simple"></constant>
+	<constant name="struts.custom.i18n.resources" value="messageResource"></constant>
+	<constant name="struts.multipart.maxSize" value="209710200"></constant>
+	<package name="default" namespace="/" extends="struts-default">
+		<interceptors>
+			<interceptor name="LoginInterception" class="com.nextinnovation.webreader.interceptor.LoginInterceptor">
+				<param name="excludeMethods">login</param>
+			</interceptor>
+			<interceptor-stack name="myStack">
+				<interceptor-ref name="LoginInterception"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="myStack"></default-interceptor-ref>
+		<global-results>
+			<result name="no_login">
+				/rl.jsp
+			</result>
+		</global-results>
+		<action name="user_*" class="userAction" method="{1}">
+			<result name="login_success" type="redirectAction">
+				book_findAll
+			</result>
+			<result name="login_fail">
+				/rl.jsp
+			</result>
+		</action>
+		<action name="book_*" class="bookAction" method="{1}">
+			<interceptor-ref name="defaultStack">
+					<!-- 单个文件大小不能超过10M -->
+				<param name="fileUpload.maximumSize">10485760</param>
+			</interceptor-ref>
+			<result name="returnIndexJsp">
+				/index.jsp
+			</result>
+			<result name="addSuccess" type="redirectAction">
+				book_findAll
+			</result>
+			<result name="addFail">
+				/book/add.jsp
+			</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,110 @@
+.body1{
+	width:480px;
+	height:100%;
+	position:absolute;
+	left:35%;
+
+}
+
+.show1{
+	float:right;
+}
+
+.addBook{
+	float:left;
+	width:400px;
+	height:800px;
+	margin-top:10px;
+}
+
+.bigBox{
+	width:480px;
+	height: 250px;
+	background: white;
+	margin-top:10px;
+	box-shadow: 0 1px 3px rgba(0,37,55,.05);
+}
+._left{
+	float:left;
+	width:150px;
+	margin-left:5px;
+}
+._left font{
+	font-family: "华文琥珀";
+	color:#4ACC60;
+	font-size: 48px;
+}
+._right{
+	float:right;
+	width:270px;
+	margin-left:5px;
+}
+.titleFont{
+	font-size: 24px;
+    clear: both;
+    color: green;
+    margin-left: 10px;
+    font-family: '华文新魏';
+}
+.bookjd{
+	clear:both;
+	text-align: center;
+}
+.bookH5{
+	float: right;
+	margin-right: 71%;
+    line-height: 20px;
+}
+.menu1{
+	background-color: white;
+	margin-top: 10px;
+	padding: 10px;
+}
+.menuItem{
+	margin-top:10px;
+}
+.menuItemNum{
+	background-color: gray;
+    color: white;
+    margin-left: 80px;
+}
+.inputDiv{
+	position:relative;
+	top:10px;
+	clear:both;
+	background: white;
+	height:210px;
+	width:480px;
+	box-shadow: 0 1px 3px rgba(0,37,55,.05);
+}
+.inputDiv div{
+	padding-top: 10px;
+	padding-left: 5px;
+	width: 475px;
+}
+
+
+.inputButton{
+	margin-top:20px;
+	clear:both;
+	position:relative;
+	top:10px;
+	width:480px;
+	height:30px;
+	background-color: white;
+	box-shadow: 0 1px 3px rgba(0,37,55,.05);
+}
+
+.setgGlyphicon{
+	font-size:24px;
+}
+
+.uploadDiv{
+	display:block;
+	position:relative;
+	top:20px;
+	clear:both;
+	background: white;
+	height:100px;
+	width:480px;
+}

@@ -1,0 +1,24 @@
+
+.body1{
+	 width:1000px;
+	 height:100%;
+	 position:absolute;
+	 left:23%;
+	 /* background-color: white; */
+ }
+
+.readerDiv{
+	margin-top:10px;
+	background-color: white;
+	width: 800px;
+	height:300px;
+	position: relative;
+	left:100px;
+	border-radius:10px;
+}
+
+.titleDiv{
+	text-align:center;
+	margin-top:10px;
+	font-family: "微软雅黑";
+}
